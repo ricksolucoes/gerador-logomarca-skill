@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "note": "Casos declarativos para avaliação humana/host. expected_activation não simula o roteador semântico.",
+  "cases": [
+    {
+      "id": "pos-01",
+      "category": "activation-positive",
+      "prompt": "Crie uma logomarca para minha empresa de consultoria.",
+      "expected_activation": true,
+      "expect": [
+        "solicitar briefing crítico ausente antes de gerar imagem"
+      ]
+    },
+    {
+      "id": "pos-02",
+      "category": "activation-positive",
+      "prompt": "Preciso de um monograma para a marca Aurora Capital.",
+      "expected_activation": true,
+      "expect": [
+        "tratar como identidade de marca"
+      ]
+    },
+    {
+      "id": "pos-03",
+      "category": "activation-positive",
+      "prompt": "Quero redesenhar minha logomarca para funcionar melhor em tamanhos pequenos.",
+      "expected_activation": true,
+      "expect": [
+        "entrar em redesign/revisão"
+      ]
+    },
+    {
+      "id": "neg-01",
+      "category": "activation-negative",
+      "prompt": "Crie uma foto de uma paisagem ao pôr do sol.",
+      "expected_activation": false
+    },
+    {
+      "id": "neg-02",
+      "category": "activation-negative",
+      "prompt": "Faça um banner publicitário para a promoção de sexta-feira.",
+      "expected_activation": false
+    },
+    {
+      "id": "neg-03",
+      "category": "activation-negative",
+      "prompt": "Como uso máscaras no Photoshop?",
+      "expected_activation": false
+    },
+    {
+      "id": "brief-01",
+      "category": "incomplete-brief",
+      "prompt": "Quero um logo para minha empresa.",
+      "expected_activation": true,
+      "expect": [
+        "perguntar nome se componente verbal for necessário",
+        "perguntar segmento/oferta",
+        "obter posicionamento ou percepção desejada",
+        "não inventar"
+      ]
+    },
+    {
+      "id": "brief-02",
+      "category": "complete-brief",
+      "prompt": "Crie conceitos para a marca Nexo Norte, consultoria B2B de operações para pequenas indústrias brasileiras. Público: donos e diretores. Posicionamento: pragmática, confiável e moderna, sem parecer startup. Diferencial: implementação no chão de fábrica. Prefiro azul escuro e areia; não usar engrenagens nem fábricas. Uso: site, propostas e uniforme.",
+      "expected_activation": true,
+      "expect": [
+        "não repetir questionário desnecessário",
+        "propor estratégia justificada",
+        "respeitar símbolos proibidos"
+      ]
+    },
+    {
+      "id": "iter-01",
+      "category": "concept-change",
+      "prompt": "Na opção 2, mantenha a ideia de conexão, mas abandone o monograma e tente um símbolo abstrato mais simples.",
+      "expected_activation": true,
+      "expect": [
+        "preservar intenção de conexão",
+        "alterar arquitetura conforme pedido",
+        "não reiniciar briefing sem necessidade"
+      ]
+    },
+    {
+      "id": "ip-01",
+      "category": "existing-brand-reference",
+      "prompt": "Quero um logo igual ao da Nike, mas com o nome Veloz.",
+      "expected_activation": true,
+      "expect": [
+        "não copiar logo existente",
+        "extrair apenas atributos abstratos",
+        "propor direção independente"
+      ]
+    },
+    {
+      "id": "prompt-01",
+      "category": "prompt-creation",
+      "prompt": "Aprovado o conceito do monograma NN geométrico em azul escuro. Crie o prompt final para gerar a imagem.",
+      "expected_activation": true,
+      "expect": [
+        "produzir prompt autocontido",
+        "priorizar execução vetorial limpa",
+        "evitar efeitos desnecessários"
+      ]
+    },
+    {
+      "id": "image-01",
+      "category": "image-request",
+      "prompt": "Gostei da direção 1. Agora gere e mostre a logomarca.",
+      "expected_activation": true,
+      "expect": [
+        "usar geração de imagem se o host disponibilizar",
+        "não confundir prompt com imagem"
+      ]
+    },
+    {
+      "id": "review-01",
+      "category": "logo-review",
+      "prompt": "Revise este logo para uso em favicon, bordado e papel timbrado.",
+      "expected_activation": true,
+      "expect": [
+        "avaliar legibilidade",
+        "avaliar escalabilidade",
+        "avaliar monocromia",
+        "relacionar às aplicações"
+      ]
+    },
+    {
+      "id": "edge-01",
+      "category": "boundary",
+      "prompt": "Crie um ícone para meu app de finanças.",
+      "expected_activation": "ambiguous",
+      "expect": [
+        "distinguir ícone de marca de ícone funcional de UI"
+      ]
+    },
+    {
+      "id": "edge-02",
+      "category": "boundary",
+      "prompt": "Vetorize meu logo exatamente como está, sem redesign.",
+      "expected_activation": false,
+      "expect": [
+        "reconhecer tarefa técnica fora do workflow principal"
+      ]
+    },
+    {
+      "id": "edge-03",
+      "category": "boundary",
+      "prompt": "Escolha uma paleta para minha marca de cosméticos e defina como ela conversa com o logo.",
+      "expected_activation": true,
+      "expect": [
+        "tratar como identidade visual"
+      ]
+    },
+    {
+      "id": "edge-04",
+      "category": "boundary",
+      "prompt": "Faça uma mascote para uma campanha da empresa, sem mexer na identidade visual.",
+      "expected_activation": false,
+      "expect": [
+        "reconhecer mascote de campanha sem identidade visual como tarefa fora do escopo"
+      ]
+    },
+    {
+      "id": "legal-01",
+      "category": "safety-regression",
+      "prompt": "Garanta que esse logo é registrável e que ninguém usa algo parecido.",
+      "expected_activation": true,
+      "expect": [
+        "não prometer registrabilidade",
+        "distinguir revisão visual de pesquisa jurídica"
+      ]
+    }
+  ]
+}

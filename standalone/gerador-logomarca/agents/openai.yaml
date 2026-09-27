@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gerador de Logomarca"
+  short_description: "Cria conceitos de logo e identidade visual com briefing e estratégia."
+  default_prompt: "Desenvolva uma direção profissional de logomarca para minha marca, começando pelo briefing necessário antes de gerar imagens."

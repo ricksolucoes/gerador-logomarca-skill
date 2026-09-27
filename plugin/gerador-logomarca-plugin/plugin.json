@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gerador-logomarca",
+  "version": "1.0.1",
+  "description": "Fluxo profissional para briefing, estratégia, conceitos, prompts, geração e revisão de logomarcas e identidade visual.",
+  "keywords": [
+    "branding",
+    "logo",
+    "logomarca",
+    "identidade-visual"
+  ]
+}
